@@ -7,3 +7,6 @@ runs:
         chmod +x ${{ github.action_path }}/clean_workspace.sh
         ${{ github.action_path }}/clean_workspace.sh
       shell: bash
+branding:
+  icon: delete
+  color: red
