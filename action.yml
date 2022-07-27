@@ -1,0 +1,9 @@
+name: 'Clean runner workspace directory'
+description: 'Cleans the directory in which the runner downloads repo and builds in'
+runs:
+  using: "composite"
+  steps:
+    - run: |
+        chmod +x ${{ github.action_path }}/clean_workspace.sh
+        ${{ github.action_path }}/clean_workspace.sh
+      shell: bash
